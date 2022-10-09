@@ -19,7 +19,7 @@ jobs:
           run: |
             touch tmp
             ls
-            python Tests.py > tmp.txt
+            python Tests.py > tmp
             python Tests.py
             ls
         - name: copy
