@@ -20,13 +20,10 @@ jobs:
             touch tmp
             ls
             python Tests.py > tmp
-            python Tests.py
-            ls
         - name: copy
           if: always()
           run: |
             sudo apt update -y 
             sudo apt install httpie -y
-            cat tmp
-            http POST https://api.telegram.org/bot5548883363:AAGz7FuLJBJ4c9b_3TIiWmFaT_PvoIS43_8/sendMessage chat_id=869012749 text=hui --ignore-stdin
+            http POST https://api.telegram.org/bot5548883363:AAGz7FuLJBJ4c9b_3TIiWmFaT_PvoIS43_8/sendMessage chat_id=869012749 text=$(python Tests.py) --ignore-stdin
  
