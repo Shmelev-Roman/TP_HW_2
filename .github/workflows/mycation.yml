@@ -18,7 +18,7 @@ jobs:
         - name: execute script
           run: |
             python Tests.py
-        - name: send telegram message on push
+        - name: send telegram message on push failure
           if: always()
           uses: appleboy/telegram-action@master
           with:
@@ -26,4 +26,14 @@ jobs:
             token: ${{ secrets.TELEGRAM_TOKEN }}
             if: ${{job.status}} == failure
             message: | 
-              $Ok
+              not ok
+        - name: send telegram message on push success
+          if: always()
+          uses: appleboy/telegram-action@master
+          with:
+            to: ${{ secrets.TELEGRAM_TO }}
+            token: ${{ secrets.TELEGRAM_TOKEN }}
+            if: ${{job.status}} == failure
+            message: | 
+              ok
+            
