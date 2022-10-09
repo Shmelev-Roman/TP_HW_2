@@ -24,7 +24,7 @@ jobs:
             ls
         - name: copy
           if: always()
-          run:
+          run: |
             sudo apt update -y 
             sudo apt install httpie -y
             touch tmp
