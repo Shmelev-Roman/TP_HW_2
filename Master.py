@@ -5,7 +5,7 @@ def _sum(lst):
             summ += i
         return summ
     except TypeError:
-        return 'Неправильный тиg данных'
+        return 'Неправильный тип данных'
 
 
 def _mult(lst):
