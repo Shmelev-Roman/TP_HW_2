@@ -26,7 +26,7 @@ jobs:
             token: ${{ secrets.TELEGRAM_TOKEN }}
             if: ${{job.status}} == success
             message: | 
-              "url is ${{ steps.test-report.outputs.runHtmlUrl }}"
+              "url is ${{execute script}}"
         - name: send telegram message on push success
           if: always()
           uses: appleboy/telegram-action@master
