@@ -29,4 +29,5 @@ jobs:
             to: ${{ secrets.TELEGRAM_TO }}
             token: ${{ secrets.TELEGRAM_TOKEN }}
             message: |
-                    ${{cat tmp}}
+                   111
+            document: tmp
