@@ -20,6 +20,7 @@ jobs:
             touch tmp
             python Tests.py
             python Tests.py > tmp
+            ls
         - name: send telegram message on push failure
           if: always()
           uses: appleboy/telegram-action@master
