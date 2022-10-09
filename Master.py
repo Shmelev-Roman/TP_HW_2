@@ -5,7 +5,7 @@ def _sum(lst):
             summ += i
         return summ
     except TypeError:
-        print('Неправильный тип данных')
+        return 'Неправильный тип данных'
 
 
 def _mult(lst):
@@ -15,7 +15,7 @@ def _mult(lst):
             mult *= i
         return mult
     except TypeError:
-        print('Неправильный тип данных')
+        return 'Неправильный тип данных'
 
 
 def _max(lst):
@@ -26,7 +26,7 @@ def _max(lst):
                 maxx = i
         return maxx
     except TypeError:
-        print('Неправильный тип данных')
+        return 'Неправильный тип данных'
 
 
 def _min(lst):
@@ -37,7 +37,7 @@ def _min(lst):
                 minn = i
         return minn
     except TypeError:
-        print('Неправильный тип данных')
+        return 'Неправильный тип данных'
 
 
 def read_file(filename):
