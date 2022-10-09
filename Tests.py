@@ -18,16 +18,16 @@ class Tests(TestCase):
     def test_min(self):
         self.assertEqual(_min(testList), -7)
 
-    def stress_min(self):
+    def test_minstress(self):
         self.assertEqual(_min(stressList), 'Неправильный тип данных')
 
-    def stress_max(self):
+    def test_maxstress(self):
         self.assertEqual(_max(stressList), 'Неправильный тип данных')
 
-    def stress_sum(self):
+    def test_sumstress(self):
         self.assertEqual(_sum(stressList), 'Неправильный тип данных')
 
-    def stress_mult(self):
+    def test_multstress(self):
         self.assertEqual(_mult(stressList), 'Неправильный тип данных')
 
 
