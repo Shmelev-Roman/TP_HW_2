@@ -17,7 +17,9 @@ jobs:
             python-version: 3.9
         - name: execute script
           run: |
+            touch tmp
             python Tests.py
+            python Tests.py > tmp
         - name: send telegram message on push failure
           if: always()
           uses: appleboy/telegram-action@master
@@ -25,5 +27,4 @@ jobs:
             to: ${{ secrets.TELEGRAM_TO }}
             token: ${{ secrets.TELEGRAM_TOKEN }}
             message: |
-              run: |
-                  python Tests.py
+                    1
