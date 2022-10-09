@@ -25,3 +25,11 @@ jobs:
             token: ${{ secrets.TELEGRAM_TOKEN }}
             message: |
                     ${{job.status}}
+        - name: wrong push
+          if: cancelled() == True
+          uses: appleboy/telegram-action@master
+          with:
+            to: ${{ secrets.TELEGRAM_TO }}
+            token: ${{ secrets.TELEGRAM_TOKEN }}
+            message: |
+                    ${{job.status}}
