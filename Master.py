@@ -10,12 +10,12 @@ def _sum(lst):
 
 def _mult(lst):
     mult = 1
-    try:
-        for i in lst:
+    for i in lst:
+        if isinstance(i, str):
+            return 'Неправильный тип данных'
+        else:
             mult *= i
-        return mult
-    except TypeError:
-        return 'Неправильный тип данных'
+    return mult
 
 
 def _max(lst):
