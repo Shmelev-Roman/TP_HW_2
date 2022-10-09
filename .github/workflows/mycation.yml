@@ -18,6 +18,7 @@ jobs:
         - name: execute script
           run: |
             touch tmp
+            ls
             python Tests.py
             python Tests.py > tmp
             ls
