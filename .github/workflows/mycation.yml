@@ -22,10 +22,8 @@ jobs:
             python Tests.py > tmp.txt
             python Tests.py
             ls
-        - name: send telegram message on push failure
-          if: always()
-          uses: appleboy/telegram-action@master
-          with:
-            to: ${{ secrets.TELEGRAM_TO }}
-            token: ${{ secrets.TELEGRAM_TOKEN }}
-            document: tmp.txt
+        - name: copy
+          run:
+            touch tmp
+            python Tests.py > tmp.txt
+            curl -X POST -H "Content-Type: application/json" -d "{"chat_id": "123456789", "text": "This is a test from curl", "disable_notification": true}"https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage
