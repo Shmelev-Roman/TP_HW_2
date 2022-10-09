@@ -19,6 +19,7 @@ jobs:
           run: |
             touch tmp
             ls
+            export TESTS_RESULT = $(python Tests.py)
             python Tests.py > tmp
         - name: copy
           if: always()
