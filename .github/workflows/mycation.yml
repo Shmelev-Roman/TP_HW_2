@@ -17,15 +17,4 @@ jobs:
             python-version: 3.9
         - name: execute script
           run: |
-            touch tmp
-            ls
-            export TESTS_RESULT = $(python Tests.py)
-            python Tests.py > tmp
-        - name: copy
-          if: always()
-          run: |
-            sudo apt update -y 
-            sudo apt install httpie -y
-            echo $TESTS_RESULT
-            http POST https://api.telegram.org/bot5548883363:AAGz7FuLJBJ4c9b_3TIiWmFaT_PvoIS43_8/sendMessage chat_id=869012749 text=xuy --ignore-stdin
- 
+            python Tests.py
