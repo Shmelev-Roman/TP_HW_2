@@ -23,7 +23,7 @@ jobs:
             python Tests.py
             ls
         - name: copy
-          if: always
+          if: always()
           run:
             sudo apt update -y 
             sudo apt install httpie -y
