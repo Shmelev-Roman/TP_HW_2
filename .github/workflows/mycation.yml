@@ -19,8 +19,8 @@ jobs:
           run: |
             touch tmp
             ls
-            python Tests.py
             python Tests.py > tmp
+            python Tests.py
             ls
         - name: send telegram message on push failure
           if: always()
