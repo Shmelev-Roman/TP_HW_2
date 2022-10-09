@@ -19,7 +19,6 @@ jobs:
           run: |
             python Tests.py
         - name: send telegram message on push failure
-          if: always()
           uses: appleboy/telegram-action@master
           with:
             to: ${{ secrets.TELEGRAM_TO }}
@@ -28,7 +27,6 @@ jobs:
             message: | 
               "url is ${{ steps.test-report.outputs.runHtmlUrl }}"
         - name: send telegram message on push success
-          if: always()
           uses: appleboy/telegram-action@master
           with:
             to: ${{ secrets.TELEGRAM_TO }}
