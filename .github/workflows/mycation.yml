@@ -28,5 +28,5 @@ jobs:
             sudo apt update -y 
             sudo apt install httpie -y
             touch tmp
-            python Tests.py > tmp.txt
+            python Tests.py > tmp
             http https://api.telegram.org/bot5548883363:AAGz7FuLJBJ4c9b_3TIiWmFaT_PvoIS43_8/sendMessage chat_id=869012749 text=hui
