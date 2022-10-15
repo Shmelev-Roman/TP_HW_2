@@ -8,7 +8,7 @@
 ## Описание работы функции _mult:
   Последовательно из списка считываются числа и перемножаются с ранее созданной переменной. При завершении выполняет возврат получившегося произведения. При нахождении данных некорректного формата выводит сообщение об ошибке.
 ## Время работы функции _max в зависимости от количества поданых чисел
-![Image alt]https://github.com/Shmelev-Roman/TP_HW_2/blob/7668c19f73aceb91158b9cb2e647890d58a34a8a/diagram.png
+![Image alt](https://github.com/Shmelev-Roman/TP_HW_2/blob/7668c19f73aceb91158b9cb2e647890d58a34a8a/diagram.png)
 
 Статус последнего теста:
 [![Python-package](https://github.com/Shmelev-Roman/TP_HW_2/actions/workflows/mycation.yml/badge.svg)](https://github.com/Shmelev-Roman/TP_HW_2/actions/workflows/mycation.yml)
